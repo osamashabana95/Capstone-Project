@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Spot</string>
+    <string name="title_home">Home</string>
+    <string name="title_Edit">Edit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string name="state_off">OFF</string>
+    <string name="state_on">ON</string>
+
+    <string name="no_departments">Please, Choose departments which you want!</string>
+
+    <string name="ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+<string name="item_content_description">Show post details</string>
+    <string name="switch_content_description">change state of department</string>
+
+
+    <string name="text_politics">Politics</string>
+    <string name="text_worldnews">World News</string>
+    <string name="text_nba">NBA</string>
+    <string name="text_jokes">Jokes</string>
+    <string name="text_funny">Funny</string>
+    <string name="text_soccer">Soccer</string>
+    <string name="text_photographs">Photographs</string>
+    <string name="text_gaming">Gaming</string>
+    <string name="text_movies">Movies</string>
+    <string name="text_news">News</string>
+    <string name="text_science">Science</string>
+    <string name="text_cutepictures">Cute Pictures</string>
+    <string name="text_relationships">Relationships</string>
+    <string name="text_technology">Technology</string>
+    <string name="text_sports">Sports</string>
+    <string name="text_documentaries">Documentaries</string>
+    <string name="text_books">Books</string>
+    <string name="text_food">Food</string>
+
+
+    <string name="tag_politics">politics</string>
+    <string name="tag_worldnews">worldnews</string>
+    <string name="tag_nba">nba</string>
+    <string name="tag_jokes">Jokes</string>
+    <string name="tag_funny">funny</string>
+    <string name="tag_soccer">soccer</string>
+    <string name="tag_photographs">pics</string>
+    <string name="tag_gaming">gaming</string>
+    <string name="tag_movies">movies</string>
+    <string name="tag_news">news</string>
+    <string name="tag_science">science</string>
+    <string name="tag_cutepictures">aww</string>
+    <string name="tag_relationships">relationships</string>
+    <string name="tag_technology">technology</string>
+    <string name="tag_sports">sports</string>
+    <string name="tag_documentaries">Documentaries</string>
+    <string name="tag_books">books</string>
+    <string name="tag_food">food</string>
+
+</resources>

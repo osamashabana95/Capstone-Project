@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/item_id"
+    android:layout_height="112dp"
+    android:orientation="horizontal"
+    android:background="@drawable/rectangle">
+
+    <ImageView
+        android:id="@+id/thumbnail_view_widget"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_spot"
+      />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/text_title_widget"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/tab_indicator_text"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif"
+            android:maxLines="2"
+            android:minLines="1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+           />
+        <TextView
+            android:id="@+id/text_name_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@android:color/tab_indicator_text"
+            android:fontFamily="serif-monospace"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

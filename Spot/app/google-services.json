@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "608540994614",
+    "firebase_url": "https://spot-7a512.firebaseio.com",
+    "project_id": "spot-7a512",
+    "storage_bucket": "spot-7a512.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608540994614:android:76282baca8c8d641",
+        "android_client_info": {
+          "package_name": "com.example.osama.spot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608540994614-64qigv2gc5jn0oml968q8uqs7u7aio2c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.osama.spot",
+            "certificate_hash": "a8aca4e58bd3f0623560fce662526ffcc8764730"
+          }
+        },
+        {
+          "client_id": "608540994614-7hvo1d1g8h901tpqkbg148k82o7tjacq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB57pNERnBdE3f3PkCG_ivYyL7E-ZEXcZw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608540994614-7hvo1d1g8h901tpqkbg148k82o7tjacq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

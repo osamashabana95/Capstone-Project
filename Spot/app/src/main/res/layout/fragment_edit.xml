@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+
+    >
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="#ffffff"
+    tools:context=".EditFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Switch
+        android:id="@+id/switch_politics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:tag="@string/tag_politics"
+        android:contentDescription="@string/switch_content_description"
+        android:text="@string/state_off"
+        android:nextFocusDown="@id/switch_worldnews"
+        android:nextFocusUp="@id/switch_food"
+        app:layout_constraintBottom_toTopOf="@+id/switch_worldnews"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_politics"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_politics"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_worldnews"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_worldnews"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_nba"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_nba"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_jokes"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_jokes"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_funny"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_funny"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_soccer"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_soccer"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_photographs"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_pics"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_gaming"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_gaming"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_movies"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_movies"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_news"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_news"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_science"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_science"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch_worldnews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/state_off"
+        android:tag="@string/tag_worldnews"
+        android:nextFocusDown="@id/switch_nba"
+        android:nextFocusUp="@id/switch_politics"
+        android:contentDescription="@string/switch_content_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_politics" />
+
+    <Switch
+        android:id="@+id/switch_nba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/state_off"
+        android:tag="@string/tag_nba"
+        android:nextFocusDown="@id/switch_jokes"
+        android:nextFocusUp="@id/switch_worldnews"
+        android:contentDescription="@string/switch_content_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_worldnews" />
+
+    <Switch
+        android:id="@+id/switch_jokes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:nextFocusDown="@id/switch_funny"
+        android:nextFocusUp="@id/switch_nba"
+        android:text="@string/state_off"
+        android:tag="@string/tag_jokes"
+        android:contentDescription="@string/switch_content_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_nba" />
+
+    <Switch
+        android:id="@+id/switch_funny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:nextFocusDown="@id/switch_soccer"
+        android:nextFocusUp="@id/switch_jokes"
+        android:text="@string/state_off"
+        android:tag="@string/tag_funny"
+        android:contentDescription="@string/switch_content_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_jokes" />
+
+    <Switch
+        android:id="@+id/switch_soccer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:nextFocusDown="@id/switch_pics"
+        android:nextFocusUp="@id/switch_funny"
+        android:text="@string/state_off"
+        android:tag="@string/tag_soccer"
+        android:contentDescription="@string/switch_content_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_funny" />
+
+    <Switch
+        android:id="@+id/switch_pics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:nextFocusDown="@id/switch_gaming"
+        android:nextFocusUp="@id/switch_soccer"
+        android:text="@string/state_off"
+        android:tag="@string/tag_photographs"
+        android:contentDescription="@string/switch_content_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_soccer" />
+
+    <Switch
+        android:id="@+id/switch_gaming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:nextFocusDown="@id/switch_movies"
+        android:nextFocusUp="@id/switch_pics"
+        android:text="@string/state_off"
+        android:tag="@string/tag_gaming"
+        android:contentDescription="@string/switch_content_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_pics" />
+
+    <Switch
+        android:id="@+id/switch_movies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:nextFocusDown="@id/switch_news"
+        android:nextFocusUp="@id/switch_gaming"
+        android:text="@string/state_off"
+        android:tag="@string/tag_movies"
+        android:contentDescription="@string/switch_content_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_gaming" />
+
+    <Switch
+        android:id="@+id/switch_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:nextFocusDown="@id/switch_science"
+        android:nextFocusUp="@id/switch_movies"
+        android:tag="@string/tag_news"
+        android:text="@string/state_off"
+        android:contentDescription="@string/switch_content_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_movies" />
+
+    <Switch
+        android:id="@+id/switch_science"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:nextFocusDown="@id/switch_pictures"
+        android:nextFocusUp="@id/switch_news"
+        android:tag="@string/tag_science"
+        android:text="@string/state_off"
+        android:contentDescription="@string/switch_content_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_news" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_cutepictures"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_pictures"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch_pictures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:nextFocusDown="@id/switch_relationships"
+        android:nextFocusUp="@id/switch_science"
+        android:text="@string/state_off"
+        android:tag="@string/tag_cutepictures"
+        android:contentDescription="@string/switch_content_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_science" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_relationships"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_relationships"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch_relationships"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:tag="@string/tag_relationships"
+        android:nextFocusDown="@id/switch_technology"
+        android:nextFocusUp="@id/switch_pictures"
+        android:text="@string/state_off"
+        android:contentDescription="@string/switch_content_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_pictures" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_technology"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_technology"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch_technology"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:nextFocusDown="@id/switch_sports"
+        android:nextFocusUp="@id/switch_relationships"
+        android:contentDescription="@string/switch_content_description"
+        android:tag="@string/tag_technology"
+        android:text="@string/state_off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_relationships" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_sports"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_sports"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch_sports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:tag="@string/tag_sports"
+        android:text="@string/state_off"
+        android:nextFocusDown="@id/switch_documentaries"
+        android:nextFocusUp="@id/switch_technology"
+        android:contentDescription="@string/switch_content_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_technology" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_documentaries"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_documentaries"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch_documentaries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:nextFocusDown="@id/switch_books"
+        android:nextFocusUp="@id/switch_sports"
+        android:contentDescription="@string/switch_content_description"
+        android:tag="@string/tag_documentaries"
+        android:text="@string/state_off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_sports" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_books"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_books"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch_books"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:nextFocusDown="@id/switch_food"
+        android:nextFocusUp="@id/switch_documentaries"
+        android:contentDescription="@string/switch_content_description"
+        android:tag="@string/tag_books"
+        android:text="@string/state_off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_documentaries" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_food"
+        app:layout_constraintBaseline_toBaselineOf="@+id/switch_food"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:nextFocusDown="@id/switch_politics"
+        android:nextFocusUp="@id/switch_books"
+        android:contentDescription="@string/switch_content_description"
+        android:tag="@string/tag_food"
+        android:text="@string/state_off"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_books" />
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>
