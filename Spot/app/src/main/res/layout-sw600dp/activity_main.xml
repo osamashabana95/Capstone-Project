@@ -65,7 +65,7 @@
         android:id="@+id/button_update"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:text="UPDATE"
+        android:text="@string/button_update_text"
         android:background="@color/colorAccent"/>
 </LinearLayout>
 </LinearLayout>

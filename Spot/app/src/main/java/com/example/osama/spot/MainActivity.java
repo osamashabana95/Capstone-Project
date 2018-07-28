@@ -22,14 +22,15 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements HomeFragment.OnListFragmentInteractionListener{
     protected static   boolean mTwoPane;
-    HomeFragment fragment1;
-    @BindView(R.id.adView) AdView mAdView;
-   // private final String AD_ID= "ca-app-pub-9659885486560738~1361391166";
+    HomeFragment fragment1 ;
+    int state;
+    AdView mAdView;
+  //  private final String AD_ID= "ca-app-pub-9659885486560738~1361391166";
     Button update;
     EditFragment fragment2;
     FragmentManager fragmentManager;
+    BottomNavigationView navigation;
     private FirebaseAnalytics mFirebaseAnalytics;
-
     // to handle click update button in big size device case
     private  Button.OnClickListener mOnClickListener = new Button.OnClickListener() {
         @Override
@@ -49,8 +50,8 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnLi
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                   fragment1 = new HomeFragment();
-                   fragmentManager = getSupportFragmentManager();
+                    fragment1 = new HomeFragment();
+                    fragmentManager = getSupportFragmentManager();
                    fragmentManager.beginTransaction().replace(R.id.container,fragment1).commit();
                     return true;
                 case R.id.navigation_edit:
@@ -71,50 +72,62 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnLi
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+
+      //  ButterKnife.bind(this);
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
       //  Log.v(this.getClass().toString(),AD_ID);
        // MobileAds.initialize(this, AD_ID);
+        mAdView =(AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        if(savedInstanceState!=null){
+         state= savedInstanceState.getInt("s");
+        }
 
-
-
-            if (findViewById(R.id.two_pane) != null) {
+        if (findViewById(R.id.two_pane) != null) {
                 mTwoPane = true;
-            } else {
+        } else {
                 mTwoPane = false;
-            }
+        }
 
-            if (mTwoPane) {
+        if (mTwoPane) {
                 fragment2 = new EditFragment();
                 fragmentManager = getSupportFragmentManager();
                 fragmentManager.beginTransaction().add(R.id.edit_container, fragment2).commit();
                 update= (Button) findViewById(R.id.button_update);
                 update.setOnClickListener(mOnClickListener);
 
-            } else {
-                BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        } else {
+                navigation = (BottomNavigationView) findViewById(R.id.navigation);
                 navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-            }
+        }
 
-            if (savedInstanceState == null) {
-                fragment1 = new HomeFragment();
-                fragmentManager = getSupportFragmentManager();
-                fragmentManager.beginTransaction().add(R.id.container, fragment1).commit();
+        if(savedInstanceState == null) {
+               fragment1 = new HomeFragment();
+               fragmentManager = getSupportFragmentManager();
+               fragmentManager.beginTransaction().add(R.id.container, fragment1).commit();
+        }
+        else {
+              if (state == R.id.navigation_home) {
+                  fragment1 = (HomeFragment) getSupportFragmentManager().getFragment(savedInstanceState, "fragment");
 
-            } else {
-                fragment1 = (HomeFragment) getSupportFragmentManager().getFragment(savedInstanceState, "fragment");
+                  FragmentManager fragmentManager = getSupportFragmentManager();
 
-                FragmentManager fragmentManager = getSupportFragmentManager();
-
-                fragmentManager.beginTransaction()
-                        .show(fragment1)
-                        .commit();
+                  fragmentManager.beginTransaction()
+                          .show(fragment1)
+                          .commit();
+               } else if (state == R.id.navigation_edit) {
 
 
-            }
+                  fragment2 = (EditFragment) getSupportFragmentManager().getFragment(savedInstanceState, "fragment2");
+                  FragmentManager fragmentManager = getSupportFragmentManager();
+                  fragmentManager.beginTransaction()
+                          .show(fragment2)
+                          .commit();
+              }
+        }
+
 
 
     }
@@ -150,7 +163,14 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnLi
         super.onSaveInstanceState(outState);
 
         //Save the fragment's instance
-        getSupportFragmentManager().putFragment(outState, "fragment", fragment1);
+       if (navigation.getSelectedItemId()==R.id.navigation_home) {
+            getSupportFragmentManager().putFragment(outState, "fragment", fragment1);
+        }
+        else if(navigation.getSelectedItemId()==R.id.navigation_edit){
+           getSupportFragmentManager().putFragment(outState, "fragment2", fragment2);
+        }
+        outState.putInt("s", navigation.getSelectedItemId());
+
     }
 
 }

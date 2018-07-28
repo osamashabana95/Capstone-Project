@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
 /**
  * {@link RecyclerView.Adapter} makes a call to the
  * specified {@link OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
+
  */
 public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder> {
 
@@ -68,10 +68,9 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
             @Override
             public void onClick(View v) {
                 if (null != mListener) {
-                    // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
                     mListener.onListFragmentInteraction(position,names[position],detailsUrls[position]);
-
+                    Log.v(mContext.toString(),"45484"+position);
                 }
             }
         });

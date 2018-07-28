@@ -10,9 +10,11 @@
     <string name="state_on">ON</string>
 
     <string name="no_departments">Please, Choose departments which you want!</string>
+    <string name="button_update_text">UPDATE</string>
+    <string name="comment_text">COMMENTS :</string>
 
     <string name="ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
-<string name="item_content_description">Show post details</string>
+    <string name="item_content_description">Show post details</string>
     <string name="switch_content_description">change state of department</string>
 
 

@@ -55,8 +55,11 @@ public class HomeFragment extends Fragment {
 
     // to load data and extract json  to get information needed
     private LoaderManager.LoaderCallbacks<String[]> load =new LoaderManager.LoaderCallbacks<String[]>() {
+
+
+
         @SuppressLint("StaticFieldLeak")
-        @NonNull
+        @Nullable
         @Override
         public Loader<String[]> onCreateLoader(int id, @Nullable final  Bundle args) {
             return new AsyncTaskLoader<String[]>(getContext()) {
@@ -116,6 +119,7 @@ public class HomeFragment extends Fragment {
                     mAdapter.setData(posts);
                     sLayoutManager.onRestoreInstanceState(mListState1);
 
+
                   int n= getActivity().getContentResolver().delete(PostContract.PostEntry.CONTENT_URI,null,null);
                   Log.v(getActivity().toString(), "*/*/"+String.valueOf(n));
                     for(int i=0 ; i<posts.length;i++) {
@@ -133,7 +137,7 @@ public class HomeFragment extends Fragment {
                     e.printStackTrace();
                 }
 
-
+                sLayoutManager.onRestoreInstanceState(mListState1);
             }
         }
 
@@ -169,9 +173,9 @@ public class HomeFragment extends Fragment {
         public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
             dAdapter.swapCursor(data);
 
-            if (mPosition == RecyclerView.NO_POSITION) mPosition = 0;
+            /*if (mPosition == RecyclerView.NO_POSITION) mPosition = 0;
 
-            recyclerView.smoothScrollToPosition(mPosition);
+            recyclerView.smoothScrollToPosition(mPosition);*/
 
         }
 
@@ -209,8 +213,8 @@ public class HomeFragment extends Fragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         // Save list state
-        mListState1 = sLayoutManager.onSaveInstanceState();
-        outState.putParcelable("ss", mListState1);
+        mListState1 = recyclerView.getLayoutManager().onSaveInstanceState();
+        outState.putParcelable("state", mListState1);
 
     }
 
@@ -220,9 +224,7 @@ public class HomeFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         if (savedInstanceState != null) {
-            mListState1 = savedInstanceState.getParcelable("ss");
-
-
+            mListState1 = savedInstanceState.getParcelable("state");
         }
     }
 
@@ -236,9 +238,9 @@ public class HomeFragment extends Fragment {
         check();
 
         Log.v(getActivity().toString(),names.toString());
-        if(names.isEmpty()){
+            if(names.isEmpty()){
              textView.setVisibility(View.VISIBLE);
-        }else {
+            }else {
             // Set the adapter
 
              Context context = view.getContext();
@@ -258,12 +260,9 @@ public class HomeFragment extends Fragment {
               }
               loaderManager2.restartLoader(LOADER_ID_2, null, load2);
 
+
+
               mAdapter = new MyItemRecyclerViewAdapter(context, mListener);
-
-
-
-
-
               Bundle queryBundle = new Bundle();
               queryBundle.putStringArrayList("keys", names);
               LoaderManager loaderManager = getLoaderManager();
@@ -277,9 +276,18 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
-
-
     @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof OnListFragmentInteractionListener) {
+            mListener = (OnListFragmentInteractionListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnListFragmentInteractionListener");
+        }
+    }
+
+   @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
@@ -296,7 +304,6 @@ public class HomeFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnListFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onListFragmentInteraction(int id,String s1,String s2);
     }
 }

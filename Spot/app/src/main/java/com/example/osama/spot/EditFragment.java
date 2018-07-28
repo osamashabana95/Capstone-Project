@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
+import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -41,8 +43,6 @@ public class EditFragment extends Fragment implements CompoundButton.OnCheckedCh
     @BindView(R.id.switch_documentaries) Switch documentaries;
     @BindView(R.id.switch_books) Switch books;
     @BindView(R.id.switch_food) Switch food;
-
-
 
     public EditFragment() {
 
@@ -109,6 +109,7 @@ public class EditFragment extends Fragment implements CompoundButton.OnCheckedCh
         check(food);
     }
 
+
     //to check each switch state from shared preferences and load each switch with it's state
 
     public void check(Switch sw){
@@ -116,9 +117,9 @@ public class EditFragment extends Fragment implements CompoundButton.OnCheckedCh
         String tag =(String) sw.getTag();
 
         boolean state = sharedpref.getBoolean(tag,false);
-        String s = sharedpref.getString(tag+tag,"OFF");
+        String s = sharedpref.getString(tag+tag,getString(R.string.state_off));
         if(sharedpref.contains(tag)) {
-            Log.v(getActivity().getBaseContext().toString(),tag);
+                Log.v(getActivity().getBaseContext().toString(),tag);
                 sw.setChecked(state);
                 sw.setText(s);
                 Log.v(getActivity().getBaseContext().toString(),s);
@@ -138,13 +139,13 @@ public class EditFragment extends Fragment implements CompoundButton.OnCheckedCh
         String name= (String) compoundButton.getTag();
         Log.v(getActivity().getBaseContext().toString(),name);
         if(b){
-            compoundButton.setText("ON");
+            compoundButton.setText(getString(R.string.state_on));
             editor.putBoolean(name,true);
-            editor.putString(name+name,"ON");
+            editor.putString(name+name,getString(R.string.state_on));
         }else{
-            compoundButton.setText("OFF");
+            compoundButton.setText(getString(R.string.state_off));
             editor.putBoolean(name,false);
-            editor.putString(name+name,"OFF");
+            editor.putString(name+name,getString(R.string.state_off));
         }
         editor.commit();
     }
