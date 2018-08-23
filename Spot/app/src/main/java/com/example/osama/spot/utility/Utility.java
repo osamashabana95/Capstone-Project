@@ -1,7 +1,9 @@
-package com.example.osama.spot;
+package com.example.osama.spot.utility;
 
 import android.net.Uri;
 import android.util.Log;
+
+import com.example.osama.spot.activities.DetailsActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;

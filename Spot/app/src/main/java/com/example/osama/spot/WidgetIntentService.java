@@ -6,8 +6,9 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
+
+import com.example.osama.spot.utility.Utility;
 
 import java.net.URL;
 import java.util.ArrayList;

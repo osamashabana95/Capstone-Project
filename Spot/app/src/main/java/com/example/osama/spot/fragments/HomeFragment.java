@@ -1,4 +1,4 @@
-package com.example.osama.spot;
+package com.example.osama.spot.fragments;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -22,6 +22,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.osama.spot.R;
+import com.example.osama.spot.adapters.DBRecyclerViewAdapter;
+import com.example.osama.spot.adapters.MyItemRecyclerViewAdapter;
+import com.example.osama.spot.PostContract;
+import com.example.osama.spot.utility.Utility;
 
 import java.net.URL;
 import java.util.ArrayList;

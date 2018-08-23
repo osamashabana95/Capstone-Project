@@ -1,4 +1,4 @@
-package com.example.osama.spot;
+package com.example.osama.spot.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.database.Cursor;
+
+import com.example.osama.spot.PostContract;
+import com.example.osama.spot.R;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
@@ -67,7 +70,7 @@ public class DBRecyclerViewAdapter extends RecyclerView.Adapter<DBRecyclerViewAd
         }
         return mCursor.getCount();
     }
-    void swapCursor(Cursor newCursor) {
+    public void swapCursor(Cursor newCursor) {
         mCursor = newCursor;
         notifyDataSetChanged();
     }

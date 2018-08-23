@@ -15,7 +15,7 @@
     android:name="com.example.osama.spot.HomeFragment"
     android:layout_marginLeft="2dp"
     android:layout_marginRight="2dp"
-    tools:context=".HomeFragment"
+    tools:context=".fragments.HomeFragment"
     tools:listitem="@layout/fragment_item" />
     <TextView
         android:id="@+id/no_departments_text"

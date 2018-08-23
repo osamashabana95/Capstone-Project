@@ -1,4 +1,4 @@
-package com.example.osama.spot;
+package com.example.osama.spot.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,10 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.osama.spot.HomeFragment.OnListFragmentInteractionListener;
+import com.example.osama.spot.R;
+import com.example.osama.spot.fragments.HomeFragment.OnListFragmentInteractionListener;
 import com.squareup.picasso.Picasso;
-
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -1,4 +1,4 @@
-package com.example.osama.spot;
+package com.example.osama.spot.fragments;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+
+import com.example.osama.spot.R;
 
 import butterknife.BindString;
 import butterknife.BindView;

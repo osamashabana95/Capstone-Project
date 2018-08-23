@@ -1,9 +1,11 @@
-package com.example.osama.spot;
+package com.example.osama.spot.activities;
 
-import android.net.Uri;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.osama.spot.R;
+import com.example.osama.spot.fragments.DetailsFragment;
 
 public class DetailsActivity extends AppCompatActivity  {
     DetailsFragment fragment;

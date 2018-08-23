@@ -1,8 +1,7 @@
-package com.example.osama.spot;
+package com.example.osama.spot.fragments;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -17,6 +16,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.osama.spot.R;
+import com.example.osama.spot.utility.Utility;
 import com.squareup.picasso.Picasso;
 
 import java.net.URL;
