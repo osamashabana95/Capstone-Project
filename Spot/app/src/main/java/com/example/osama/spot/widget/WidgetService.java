@@ -1,7 +1,9 @@
-package com.example.osama.spot;
+package com.example.osama.spot.widget;
 
 import android.content.Intent;
 import android.widget.RemoteViewsService;
+
+import com.example.osama.spot.widget.ListRemoteViewsFactory;
 
 public class WidgetService extends RemoteViewsService {
     @Override

@@ -1,4 +1,4 @@
-package com.example.osama.spot;
+package com.example.osama.spot.widget;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
 
+import com.example.osama.spot.R;
 import com.example.osama.spot.activities.DetailsActivity;
 
 /**

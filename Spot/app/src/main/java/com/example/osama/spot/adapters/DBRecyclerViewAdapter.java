@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.database.Cursor;
 
-import com.example.osama.spot.PostContract;
+import com.example.osama.spot.database.PostContract;
 import com.example.osama.spot.R;
 import com.squareup.picasso.Picasso;
 

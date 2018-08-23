@@ -26,7 +26,7 @@ import android.widget.TextView;
 import com.example.osama.spot.R;
 import com.example.osama.spot.adapters.DBRecyclerViewAdapter;
 import com.example.osama.spot.adapters.MyItemRecyclerViewAdapter;
-import com.example.osama.spot.PostContract;
+import com.example.osama.spot.database.PostContract;
 import com.example.osama.spot.utility.Utility;
 
 import java.net.URL;

@@ -1,4 +1,4 @@
-package com.example.osama.spot;
+package com.example.osama.spot.database;
 
 import android.net.Uri;
 import android.provider.BaseColumns;

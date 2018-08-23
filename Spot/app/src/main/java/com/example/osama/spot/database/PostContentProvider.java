@@ -1,4 +1,4 @@
-package com.example.osama.spot;
+package com.example.osama.spot.database;
 
 import android.content.ContentProvider;
 import android.content.ContentUris;
@@ -11,7 +11,10 @@ import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import static com.example.osama.spot.PostContract.PostEntry.TABLE_NAME;
+import com.example.osama.spot.database.PostContract;
+import com.example.osama.spot.database.PostDBHelper;
+
+import static com.example.osama.spot.database.PostContract.PostEntry.TABLE_NAME;
 
 public class PostContentProvider extends ContentProvider {
 

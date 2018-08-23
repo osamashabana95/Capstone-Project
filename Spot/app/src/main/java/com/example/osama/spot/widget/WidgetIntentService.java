@@ -1,4 +1,4 @@
-package com.example.osama.spot;
+package com.example.osama.spot.widget;
 
 import android.app.IntentService;
 import android.appwidget.AppWidgetManager;

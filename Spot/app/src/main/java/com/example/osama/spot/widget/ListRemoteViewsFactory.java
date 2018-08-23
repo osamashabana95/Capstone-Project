@@ -1,4 +1,4 @@
-package com.example.osama.spot;
+package com.example.osama.spot.widget;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
+import com.example.osama.spot.R;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;

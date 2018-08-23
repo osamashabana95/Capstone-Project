@@ -32,12 +32,12 @@
         </activity>
 
         <provider
-            android:name=".PostContentProvider"
+            android:name=".database.PostContentProvider"
             android:authorities="com.example.osama.spot"
             android:exported="false" />
-        <service android:name=".WidgetIntentService"/>
-        <service android:name=".WidgetService" android:permission="android.permission.BIND_REMOTEVIEWS"/>
-        <receiver android:name=".SpotWidget">
+        <service android:name=".widget.WidgetIntentService"/>
+        <service android:name=".widget.WidgetService" android:permission="android.permission.BIND_REMOTEVIEWS"/>
+        <receiver android:name=".widget.SpotWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
