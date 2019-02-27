@@ -17,14 +17,12 @@ Implemented my custom app(Spot) using the full gamut of the Android framework, i
 ## Libraries
 This project uses the following libraries:
 
-Picasso
+[Picasso](https://github.com/square/picasso)
 
-Butter Knife
+[Butter Knife](https://github.com/JakeWharton/butterknife)
 
 ## License
-Copyright 2013 Square, Inc.
-
-Copyright 2013 Jake Wharton
+Copyright 2018 Osama Shabana
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
